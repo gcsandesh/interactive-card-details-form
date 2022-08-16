@@ -44,6 +44,10 @@ body {
   text-transform: uppercase;
   font-weight: 500;
 }
-.formItem__input{
+
+.formItem__input {
   margin: 0.25rem 0 0.5rem 0;
+}
+.card{
+  background-image: url("./images/bg-card-front.png");
 }
