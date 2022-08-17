@@ -14,30 +14,87 @@ body {
   font-family: 'Space Grotesk', sans-serif;
 }
 
-.hero {
-  background-image: url("./images/bg-main-mobile.png");
-  height: 300px;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-@media (min-width:700px) {
-  .hero {
-    background-image: url("./images/bg-main-desktop.png");
-  }
-}
-
-.main {
-  align-items: center;
-}
-
+/* general styles */
 .container {
   width: 90%;
+  margin: 0 auto;
+  max-width: 500px;
 }
 
 .flex--col {
   display: flex;
   flex-direction: column;
+}
+
+.flex--row {
+  display: flex;
+}
+
+/*main contains everything inside root*/
+.main {
+  align-items: center;
+}
+
+/* for hero */
+.hero {
+  /* height: 50vmax; */
+  border: 3px solid green;
+  width: 100%;
+  background-image: url("./images/bg-main-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (min-width:600px) {
+  .hero {
+    background-image: url("./images/bg-main-desktop.png");
+  }
+}
+
+/* for cards */
+.cards--container {
+  height: 100%;
+  border: 5px solid yellow;
+  /* position: relative; */
+}
+
+.card__back--container {
+  height: 40vmin;
+  margin-left: auto;
+  position: relative;
+  width: 100%;
+  border: 3px solid pink;
+}
+
+.card__front--container {
+  margin-right: 0;
+  position: absolute;
+  top: 55%;
+  width: 85%;
+  height: 100%;
+}
+
+.card__front--img, .card__back--img {
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.card__back--img {
+  background-image: url("./images/bg-card-back.png");
+  width: 85%;
+  margin-left: auto;
+  border: 3px solid green;
+}
+
+.card__front--img {
+  background-image: url("./images/bg-card-front.png");
+}
+
+/*for the form*/
+.form--container {
+  padding-top: 20vmin;
 }
 
 .formItem__label {
@@ -47,7 +104,4 @@ body {
 
 .formItem__input {
   margin: 0.25rem 0 0.5rem 0;
-}
-.card{
-  background-image: url("./images/bg-card-front.png");
 }
