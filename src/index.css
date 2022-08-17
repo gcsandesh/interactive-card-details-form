@@ -5,7 +5,15 @@
 }
 
 :root {
-  font-size: 18px;
+  font-size: 16px;
+  --white: #fff;
+  --light: hsl(270, 3%, 87%);
+  --dark: hsl(279, 6%, 55%);
+  --darker: hsl(278, 68%, 11%);
+  --red: hsl(0, 100%, 66%);
+  /*for input errors*/
+  --gradient: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+  /*active input border*/
 }
 
 body {
@@ -37,64 +45,103 @@ body {
 
 /* for hero */
 .hero {
-  /* height: 50vmax; */
-  border: 3px solid green;
   width: 100%;
+  padding: 2rem 0 3rem;
+  color: var(--white);
+  letter-spacing: 0.1rem;
   background-image: url("./images/bg-main-mobile.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-@media (min-width:600px) {
-  .hero {
-    background-image: url("./images/bg-main-desktop.png");
+/* for cards */
+.cards--container {
+  border: 3px solid green;
+  position: relative;
+  justify-content: flex-end;
+}
+
+/* each card */
+.card {
+  position: relative;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back--card {
+  margin-right: 0;
+}
+
+.front--card {
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+
+/*card image*/
+.card__img {
+  width: 100%;
+}
+
+/* for numbers inside the cards */
+.card__cvcNum {
+  position: absolute;
+  top: 45%;
+  right: 10%;
+  font-size: 0.75rem;
+}
+
+.card__details {
+  position: absolute;
+  top: 45%;
+  border: 1px solid yellow;
+  justify-content: space-between;
+  height: 40%;
+}
+
+.card__cardNumber {
+  font-size: 1.25rem;
+}
+
+.card__cardName__expiryDate {
+  font-size: 0.75rem;
+}
+
+/*up to 425px screens*/
+@media (max-width: 425px) {
+  .card__cardNumber {
+    font-size: 1.1rem;
   }
 }
 
-/* for cards */
-.cards--container {
-  height: 100%;
-  border: 5px solid yellow;
-  /* position: relative; */
+/* up to 375px screens */
+@media (max-width:375px) {
+  .card__cardName__expiryDate {
+    font-size: 0.75rem;
+  }
+
+  .card__cardNumber {
+    font-size: 0.9rem;
+  }
 }
 
-.card__back--container {
-  height: 40vmin;
-  margin-left: auto;
-  position: relative;
+
+.card__cardName__expiryDate {
+  /* padding-top: 15px; */
+  /* height: 3rem; */
   width: 100%;
-  border: 3px solid pink;
+  justify-content: space-between;
 }
 
-.card__front--container {
-  margin-right: 0;
-  position: absolute;
-  top: 55%;
-  width: 85%;
-  height: 100%;
-}
-
-.card__front--img, .card__back--img {
-  height: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-}
-
-.card__back--img {
-  background-image: url("./images/bg-card-back.png");
-  width: 85%;
-  margin-left: auto;
-  border: 3px solid green;
-}
-
-.card__front--img {
-  background-image: url("./images/bg-card-front.png");
+.card__cardName {
+  text-transform: uppercase;
 }
 
 /*for the form*/
 .form--container {
-  padding-top: 20vmin;
+  padding-top: 25vmin;
 }
 
 .formItem__label {
@@ -104,4 +151,15 @@ body {
 
 .formItem__input {
   margin: 0.25rem 0 0.5rem 0;
+}
+
+/* for larger screens */
+@media (min-width:600px) {
+  :root {
+    font-size: 18px;
+  }
+
+  .hero {
+    background-image: url("./images/bg-main-desktop.png");
+  }
 }

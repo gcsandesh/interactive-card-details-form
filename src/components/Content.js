@@ -6,7 +6,7 @@ export default function Content() {
         <label className="formItem__label" htmlFor="cardHolderName">
           Cardholder Name
         </label>
-        <input className="formItem__input"type="text" name="cardHolderName" placeholder="e.g. Ram Sherpa" />
+        <input className="formItem__input"type="text" name="cardHolderName" placeholder="e.g. Hari Bahadur" />
         <label className="formItem__label" htmlFor="cardNumber">
           Card Number
         </label>
