@@ -20,6 +20,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Space Grotesk', sans-serif;
+  letter-spacing: 0.05rem;
 }
 
 /* general styles */
@@ -56,7 +57,6 @@ body {
 
 /* for cards */
 .cards--container {
-  border: 3px solid green;
   position: relative;
   justify-content: flex-end;
 }
@@ -96,7 +96,6 @@ body {
 .card__details {
   position: absolute;
   top: 45%;
-  border: 1px solid yellow;
   justify-content: space-between;
   height: 40%;
 }
@@ -129,8 +128,6 @@ body {
 
 
 .card__cardName__expiryDate {
-  /* padding-top: 15px; */
-  /* height: 3rem; */
   width: 100%;
   justify-content: space-between;
 }
@@ -142,6 +139,7 @@ body {
 /*for the form*/
 .form--container {
   padding-top: 25vmin;
+  padding-bottom: 2.5rem;
 }
 
 .formItem__label {
@@ -151,6 +149,27 @@ body {
 
 .formItem__input {
   margin: 0.25rem 0 0.5rem 0;
+  font-family: inherit;
+  letter-spacing: inherit;
+  border-radius: 5px;
+  border: 1px solid var(--light);
+  padding: 1rem;
+  /* outline: linear-gradient(hsl(249, 99%, 64%) to hsl(278, 94%, 30%)) solid 2px; */
+}
+.formItem__input:invalid{
+  outline: 2px solid var(--red);
+}
+
+.btn {
+  border-radius: 5px;
+  padding: 1rem 2rem;
+  border: none;
+  background-color: var(--darker);
+  color: var(--white);
+  font-family: inherit;
+  font-weight: 500;
+  letter-spacing: inherit;
+  cursor: pointer;
 }
 
 /* for larger screens */

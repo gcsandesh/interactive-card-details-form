@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://sandeshgc.github.io/Interactive-card-details-form/](https://sandeshgc.github.io/Interactive-card-details-form/)
+- Live Site URL: [https://sandeshgc.github.io/Interactive-card-details-form/](https://sandeshgc.github.io/Interactive-card-details-form/)
 
 ## My process
 

@@ -1,12 +1,12 @@
 import React from "react";
-import Card from "./Card"
-export default function Hero() {
+import Card from "./Card";
+export default function Hero(props) {
   return (
     <div className="hero">
       <div className="container cards--container flex--row">
         {/* contains cards */}
-        <Card isFrontFace={false} />
-        <Card isFrontFace={true}/>
+        <Card formData={props.formData} handleInputChange={props.handleInputChange} isFrontFace={false} />
+        <Card formData={props.formData} handleInputChange={props.handleInputChange} isFrontFace={true} />
       </div>
     </div>
   );
