@@ -4,11 +4,11 @@ import Content from "./components/Content";
 
 function App() {
   const [cardDetails, setCardDetails] = React.useState({
-    cardHolderName: "",
-    cardNumber: "",
-    expiryMonth: "",
-    expiryYear: "",
-    cvc: "",
+    cardHolderName: "Hari Bahadur",
+    cardNumber: "0000 0000 0000 0000",
+    expiryMonth: "MM",
+    expiryYear: "YY",
+    cvc: "000",
   });
   //to handle change in form input
   function handleInputChange(event) {
