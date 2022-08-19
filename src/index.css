@@ -177,8 +177,22 @@ body {
   :root {
     font-size: 18px;
   }
-
+  .main{
+    /* height: 100vh; */
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
   .hero {
+    width:30%;
     background-image: url("./images/bg-main-desktop.png");
+    height: 100vh;
+    background-size: fill;
+    display: flex;
+    align-items: center;
+  }
+  .form--container{
+    width: 60%;
+    padding: 50px;
   }
 }
