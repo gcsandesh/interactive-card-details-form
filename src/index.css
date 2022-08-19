@@ -126,7 +126,6 @@ body {
   }
 }
 
-
 .card__cardName__expiryDate {
   width: 100%;
   justify-content: space-between;
@@ -159,6 +158,45 @@ body {
 
 .formItem__input:invalid {
   outline: 2px solid var(--red);
+}
+
+/* for month and year fields */
+.expiryDate__cvc {
+  /* align-items: space-between; */
+  align-items: flex-end;
+  /* width: 100%; */
+  justify-content: space-between;
+}
+
+.expiryDate__container {
+  align-items: space-between;
+  width: 45%;
+}
+
+.expiryDate__input--container {
+  justify-content: space-between;
+  width: 100%;
+}
+.expiryDate+.expiryDate{
+  margin-left: 1rem;
+}
+.expiryDate {
+  width: 50%;
+}
+
+/* .expiryDate--container{
+  display: flex;
+  justify-content: space-between;
+} */
+.cvc__input--container {
+  /* justify-content: center; */
+  align-items: space-between;
+  width: 50%;
+  height: 100%;
+}
+
+.cvc__input {
+  width: 100%;
 }
 
 .btn {
