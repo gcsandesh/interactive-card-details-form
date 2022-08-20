@@ -162,9 +162,7 @@ body {
 
 /* for month and year fields */
 .expiryDate__cvc {
-  /* align-items: space-between; */
   align-items: flex-end;
-  /* width: 100%; */
   justify-content: space-between;
 }
 
@@ -184,12 +182,7 @@ body {
   width: 50%;
 }
 
-/* .expiryDate--container{
-  display: flex;
-  justify-content: space-between;
-} */
 .cvc__input--container {
-  /* justify-content: center; */
   align-items: space-between;
   width: 50%;
   height: 100%;
