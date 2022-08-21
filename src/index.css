@@ -161,24 +161,19 @@ body {
   font-family: inherit;
   letter-spacing: inherit;
   border-radius: 7px;
-  /* border: none; */
   border: 1px solid var(--light);
   border-width: 0 0 2px 0;
   padding: 1rem;
   outline: none;
   transition: border 250ms ease-out;
 }
-.formItem__input:focus{
-  border-color: green;
-  /* border-width: 0 0 2px 0; */
-}
+
 .formItem__input:focus:valid {
-  /* outline: 1px solid green; */
+  border-color: green;
 }
 
 .formItem__input:focus:invalid {
-  /* outline: 1px solid var(--red); */
-  outline: none;
+  border-color: var(--red);
 }
 
 /* for month and year fields */
