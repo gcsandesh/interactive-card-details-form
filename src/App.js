@@ -13,18 +13,26 @@ function App() {
   });
   //to handle change in form input
   function handleInputChange(event) {
-    console.log(event.target.name);
+    const { name, value } = event.target;
+    // console.log(name);
+    // console.log(maxLength)
+    // let newValue = value.slice(0, maxLength);
+    let newValue = value;
     setCardDetails((prevCardDetails) => {
-      const { name, value } = event.target;
-      let newValue = value;
       if (name === "cardNumber") {
         newValue = formattedCardNumber(value);
+        // console.log("after formatting",newValue)
       }
       return {
         ...prevCardDetails,
         [name]: newValue,
       };
-    });
+    })}
+
+    // for trimming input when max input limit is reached
+    function handleMaxInput(event) {
+      event.target.value = event.target.value.slice(0, event.target.maxLength)
+    }
     //returns properly formatted card Number
     function formattedCardNumber(cardNum) {
       if (!cardNum) {
@@ -45,8 +53,8 @@ function App() {
         4,
         8
       )} ${cardNumDigits.slice(8, 12)} ${cardNumDigits.slice(12, 16)}`;
-    }
-  }
+    }//end of function
+  
   //when form is submitted
   function handleSubmit(event) {
     event.preventDefault();
@@ -58,9 +66,10 @@ function App() {
     console.log("continue");
     toggleIsSubmitted();
   }
-  function toggleIsSubmitted(){
-    setIsSubmitted(prevIsSubmitted=>!prevIsSubmitted)
+  function toggleIsSubmitted() {
+    setIsSubmitted((prevIsSubmitted) => !prevIsSubmitted);
   }
+
   return (
     <main className="main flex--col">
       <Hero formData={cardDetails} handleInputChange={handleInputChange} />
@@ -70,6 +79,7 @@ function App() {
           formData={cardDetails}
           handleSubmit={handleSubmit}
           handleInputChange={handleInputChange}
+          handleMaxInput={handleMaxInput}
         />
       )}
     </main>

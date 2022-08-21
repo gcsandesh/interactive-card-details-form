@@ -12,8 +12,10 @@ export default function Form(props) {
           name="cardHolderName"
           onChange={props.handleInputChange}
           placeholder="e.g. Hari Bahadur"
+          maxLength={32}
+          onInput={props.handleMaxInput}
           // value={props.formData.cardHolderName}
-          // required
+          required
         />
         <label className="formItem__label" htmlFor="cardNumber">
           Card Number
@@ -24,9 +26,10 @@ export default function Form(props) {
           name="cardNumber"
           onChange={props.handleInputChange}
           maxLength="16"
+          onInput={props.handleMaxInput}
           // value={props.formData.cardNumber}
           placeholder="e.g. 1234 5678 9123 0000"
-          // required
+          required
         />
         <div className="expiryDate__cvc flex--row">
           <span className="expiryDate__container">
@@ -42,8 +45,10 @@ export default function Form(props) {
                 name="expiryMonth"
                 placeholder="MM"
                 onChange={props.handleInputChange}
+                maxLength={2}
+                onInput={props.handleMaxInput}
                 // value={props.formData.expiryMonth}
-                // required
+                required
               />
               <input
                 className="formItem__input expiryDate"
@@ -53,8 +58,10 @@ export default function Form(props) {
                 max="99"
                 placeholder="YY"
                 onChange={props.handleInputChange}
+                maxLength={2}
+                onInput={props.handleMaxInput}
                 // value={props.formData.expiryYear}
-                // required
+                required
               />
             </span>
           </span>
@@ -70,8 +77,10 @@ export default function Form(props) {
               max="999"
               placeholder="e.g. 123"
               onChange={props.handleInputChange}
+              maxLength={3}
+              onInput={props.handleMaxInput}
               // value={props.formData.cvc}
-              // required
+              required
             />
           </span>
         </div>
