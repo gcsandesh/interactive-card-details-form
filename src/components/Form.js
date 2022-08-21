@@ -1,8 +1,5 @@
 import React from "react";
-export default function Content(props) {
-  // const date = new Date();
-  // const year = date.getFullYear();
-  // console.log(year);
+export default function Form(props) {
   return (
     <div className="form--container container">
       <form className="flex--col" onSubmit={props.handleSubmit}>
@@ -16,17 +13,20 @@ export default function Content(props) {
           onChange={props.handleInputChange}
           placeholder="e.g. Hari Bahadur"
           // value={props.formData.cardHolderName}
+          // required
         />
         <label className="formItem__label" htmlFor="cardNumber">
           Card Number
         </label>
         <input
           className="formItem__input"
-          type="text"
+          type="number"
           name="cardNumber"
           onChange={props.handleInputChange}
+          maxLength="16"
           // value={props.formData.cardNumber}
           placeholder="e.g. 1234 5678 9123 0000"
+          // required
         />
         <div className="expiryDate__cvc flex--row">
           <span className="expiryDate__container">
@@ -43,6 +43,7 @@ export default function Content(props) {
                 placeholder="MM"
                 onChange={props.handleInputChange}
                 // value={props.formData.expiryMonth}
+                // required
               />
               <input
                 className="formItem__input expiryDate"
@@ -53,6 +54,7 @@ export default function Content(props) {
                 placeholder="YY"
                 onChange={props.handleInputChange}
                 // value={props.formData.expiryYear}
+                // required
               />
             </span>
           </span>
@@ -69,6 +71,7 @@ export default function Content(props) {
               placeholder="e.g. 123"
               onChange={props.handleInputChange}
               // value={props.formData.cvc}
+              // required
             />
           </span>
         </div>
