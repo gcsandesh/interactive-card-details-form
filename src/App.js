@@ -3,7 +3,7 @@ import Hero from "./components/Hero";
 import Form from "./components/Form";
 import ContentAfterSubmit from "./components/ContentAfterSubmit.js";
 function App() {
-  const [isSubmitted, setIsSubmitted] = React.useState(true); //initially the form is not submitted
+  const [isSubmitted, setIsSubmitted] = React.useState(false); //initially the form is not submitted
   const [cardDetails, setCardDetails] = React.useState({
     cardHolderName: "Hari Bahadur",
     cardNumber: "0000 0000 0000 0000",
