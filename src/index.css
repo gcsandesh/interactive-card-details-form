@@ -145,85 +145,6 @@ body {
   text-transform: uppercase;
 }
 
-/*for the form*/
-.form--container {
-  padding-top: 25vmin;
-  padding-bottom: 2.5rem;
-}
-
-.formItem__label {
-  text-transform: uppercase;
-  font-weight: 500;
-}
-
-.formItem__input {
-  margin: 0.5rem 0 0.75rem 0;
-  font-family: inherit;
-  letter-spacing: inherit;
-  border-radius: 7px;
-  border: 1px solid var(--light);
-  border-width: 0 0 2px 0;
-  padding: 1rem;
-  outline: none;
-  transition: border 250ms ease-out;
-}
-
-.formItem__input:focus:valid {
-  border-color: green;
-}
-
-.formItem__input:focus:invalid {
-  border-color: var(--red);
-}
-
-/* for month and year fields */
-.expiryDate__cvc {
-  align-items: flex-end;
-  justify-content: space-between;
-}
-
-.expiryDate__container {
-  align-items: space-between;
-  width: 45%;
-}
-
-.expiryDate__input--container {
-  justify-content: space-between;
-  width: 100%;
-}
-
-.expiryDate+.expiryDate {
-  margin-left: 1rem;
-}
-
-.expiryDate {
-  width: 50%;
-}
-
-.cvc__input--container {
-  align-items: space-between;
-  width: 50%;
-  height: 100%;
-}
-
-.cvc__input {
-  width: 100%;
-}
-
-.btn {
-  border-radius: 5px;
-  margin: 1rem auto;
-  padding: 1rem 2rem;
-  border: none;
-  background-color: var(--darker);
-  color: var(--white);
-  font-family: inherit;
-  font-weight: 500;
-  letter-spacing: inherit;
-  cursor: pointer;
-  width: 100%;
-}
-
 /*for ContentAfterSubmit*/
 .after__submit--content {
   padding-top: 25vmin;
@@ -298,10 +219,6 @@ body {
 }
 
 @media (min-width: 1100px) {
-  :root {
-    font-size: 18px;
-  }
-
   .card__cardNumber {
     font-size: 1.15rem;
   }

@@ -6,7 +6,7 @@ export default function ContentAfterSubmit(props) {
         <img src={checkedImg} className="complete--icon" alt="check mark"/>
         <h2 className="uppercase--text">Thank You!</h2>
         <p>We've added your card details</p>
-        <button className="btn" onClick={props.handleContinue}>Continue</button>
+        <button className="btn" onClick={props.resetPage}>Continue</button>
     </main>
   );
 }
