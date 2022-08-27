@@ -23,7 +23,10 @@
   border-width: 0 0 2px 0;
   padding: 1rem;
   outline: none;
-  transition: border 250ms ease-out;
+  transition: box-shadow 250ms ease-out;
+}
+.formItem__input:focus{
+  box-shadow: 0px 7px 10px 1px rgba(0,0,0,0.1);
 }
 
 
@@ -58,7 +61,7 @@
   border-radius: 5px;
   margin: 2rem auto 1rem auto;
   padding: 1rem 2rem;
-  border: none;
+  border-width: 1.75px;
   background-color: var(--darker);
   color: var(--white);
   font-family: inherit;
@@ -66,11 +69,17 @@
   letter-spacing: inherit;
   cursor: pointer;
   width: 100%;
+  transition: all 250ms ease-in-out;
+}
+
+.btn:hover {
+  background-color: var(--light);
+  color: var(--darker);
+  border-color: var(--darker);
 }
 
 .error--msg {
   color: var(--red);
   font-size: 0.75rem;
   margin: 0;
-  transition: opacity 150ms ease-in-out;
 }

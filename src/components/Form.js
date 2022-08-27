@@ -77,7 +77,7 @@ export default function Form(props) {
               className="formItem__input cvc__input"
               type="number"
               name="cvc"
-              min="000"
+              min="100"
               max="999"
               placeholder="e.g. 123"
               onChange={props.handleInputChange}

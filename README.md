@@ -30,7 +30,8 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./screenshot-mobile.png)
+![](./screenshot-desktop.png)
 
 ### Links
 
@@ -44,17 +45,17 @@ Users should be able to:
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
-- [TailwindCSS]() - For styles
 
 ### What I learned
-
-
+Taking form inputs, validating them and handling form submits.
+Using Regular Expressions in JS to find certain patterns in input.
+Object.keys().length method
 
 ### Useful resources
-
+[Form Validation using React](https://www.youtube.com/watch?v=EYpdEYK25Dc)
+[Check if String contains Numbers](https://bobbyhadz.com/blog/javascript-check-if-string-contains-numbers#check-if-string-contains-numbers)
 
 ## Author
 
@@ -63,4 +64,6 @@ Users should be able to:
 - Twitter - [@gcsandesh01](https://www.twitter.com/gcsandesh01)
 
 ## Acknowledgments
-
+[Frontend Mentor](https://www.frontendmentor.io/profile/SandeshGC)
+[Dipesh Malvia](https://www.youtube.com/c/DipeshMalvia)
+[Stack Overflow](https://www.stackoverflow.com)

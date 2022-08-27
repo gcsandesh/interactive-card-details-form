@@ -53,7 +53,7 @@ function App() {
       4,
       8
     )} ${cardNumDigits.slice(8, 12)} ${cardNumDigits.slice(12, 16)}`;
-  } //end of function
+  }
 
   function handleSubmit(event) {
     //when form is submitted
@@ -109,7 +109,7 @@ function App() {
       //if expiryMonth or expiryYear are not empty but default
       errors.expiryDate = "Cannot be blank";
     } else if (inputData.expiryMonth < 1 || inputData.expiryMonth > 12) {
-      errors.expiryDate = "Month must be between 1 and 12";
+      errors.expiryDate = "Months must be between 1 and 12";
     } else if (inputData.expiryYear < currentYear) {
       errors.expiryDate = "Card is already expired";
     }
