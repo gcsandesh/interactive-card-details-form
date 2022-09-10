@@ -3,7 +3,7 @@ import Hero from "./components/Hero";
 import Form from "./components/Form";
 import ContentAfterSubmit from "./components/ContentAfterSubmit.js";
 function App() {
-  const initialData = {
+  let initialData = {
     cardHolderName: "Hari Bahadur",
     cardNumber: "0000 0000 0000 0000",
     expiryMonth: "MM",
@@ -28,6 +28,23 @@ function App() {
       };
     });
   }
+  // only on first render
+  React.useEffect(() => {
+    // on page reload only
+    const data = JSON.parse(localStorage.getItem("card"));
+    if (data) {
+      setCard(data);
+    } else {
+      console.log("no data found");
+    }
+  }, []);
+  // everytime the card details change
+  React.useEffect(() => {
+    if (card!==initialData){
+      //if card is different from the initial card
+    localStorage.setItem("card", JSON.stringify(card));
+    }
+  });
 
   function handleMaxInput(event) {
     // for trimming input when max input limit is reached
