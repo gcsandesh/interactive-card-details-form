@@ -12,7 +12,7 @@
   --darker: hsl(278, 68%, 11%);
   --red: hsl(0, 100%, 66%);
   /*for input errors*/
-  --gradient: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+  /* --gradient: hsl(249, 99%, 64%) to hsl(278, 94%, 30%); */
   /*active input border*/
 }
 
