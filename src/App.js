@@ -28,23 +28,6 @@ function App() {
       };
     });
   }
-  // only on first render
-  React.useEffect(() => {
-    // on page reload only
-    const data = JSON.parse(localStorage.getItem("card"));
-    if (data) {
-      setCard(data);
-    } else {
-      console.log("no data found");
-    }
-  }, []);
-  // everytime the card details change
-  React.useEffect(() => {
-    if (card!==initialData){
-      //if card is different from the initial card
-    localStorage.setItem("card", JSON.stringify(card));
-    }
-  });
 
   function handleMaxInput(event) {
     // for trimming input when max input limit is reached
@@ -76,7 +59,6 @@ function App() {
     //when form is submitted
     event.preventDefault();
     const receivedErrors = validateForm(card); //returns the object of errors and sets into errorList state
-    // console.log(receivedErrors);
     if (Object.keys(receivedErrors).length) {
       //if errors exist
       // console.log("Errors received!");
@@ -88,6 +70,7 @@ function App() {
     }
   }
   function validateForm(inputData) {
+    console.log(inputData.cardNumber.length);
     //to check input fields on form submit
     //and return an object containing respective errors
     const errors = {}; //
@@ -113,7 +96,7 @@ function App() {
     ) {
       //if empty card Number or default card number
       errors.cardNumber = "Cannot be blank";
-    } else if (inputData.cardNumber.length < 16) {
+    } else if (inputData.cardNumber.length !== (16+3)) { //3 for the spaces between the block of numbers
       errors.cardNumber = "Card number must contain 16 digits";
     }
     if (!inputData.expiryMonth || !inputData.expiryYear) {
