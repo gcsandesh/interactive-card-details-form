@@ -1,7 +1,7 @@
 import React from "react";
 import Hero from "./components/Hero";
 import Form from "./components/Form";
-import ContentAfterSubmit from "./components/ContentAfterSubmit.js";
+import ContentAfterSubmit from "./components/ContentAfterSubmit";
 function App() {
   let initialData = {
     cardHolderName: "Hari Bahadur",
